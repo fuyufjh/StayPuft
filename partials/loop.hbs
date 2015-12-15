@@ -19,7 +19,8 @@
         </section>
     </header>
     <section class="post-content">
-        {{content}}
+        <p class="excerpt">{{content cut="true" words="100"}}</p>
+		{{#if cut_text}}<a href="{{url}}">{{cut_text default="Read more &rarr;"}}</a>{{/if}}
     </section>
     <footer class="post-indexfooter">
         <i class="fa fa-comment-o"></i> <a href="{{url}}#disqus_thread">Comments</a>
